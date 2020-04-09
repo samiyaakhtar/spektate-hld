@@ -37,7 +37,7 @@ steps:
       ./spk/spk deployment create -n $(INTROSPECTION_ACCOUNT_NAME) -k $(INTROSPECTION_ACCOUNT_KEY) -t $(INTROSPECTION_TABLE_NAME) -p $(INTROSPECTION_PARTITION_KEY) --p3 $(Build.BuildId) --hld-commit-id $commitId
       fi
     displayName: 'If configured, update manifest pipeline details in Spektate db before manifest generation'
-    condition: 'and(ne(variables[''INTROSPECTION_ACCOUNT_NAME''], ''''), ne(variables[''INTROSPECTION_ACCOUNT_KEY''], ''''),ne(variables[''INTROSPECTION_TABLE_NAME''], ''''),ne(variables[''INTROSPECTION_PARTITION_KEY''], ''''))'
+    condition: 'and(ne(variables[''INTROSPECTION_ACCOUNT_NAME''], ''''), ne(variables[''INTROSPECTION_ACCOUNT_KEY''], ''''),ne(variables[''INTROSPECTION_TABLE_NAME''], ''''),ne(variables[''INTROSPECTION_PARTITION_KEY''], ''''), ne(variables[''Build.Reason''], ''PullRequest''))'
   - task: ShellScript@2
     displayName: Validate fabrikate definitions
     inputs:
@@ -66,4 +66,4 @@ steps:
       download_spk
       ./spk/spk deployment create -n $(INTROSPECTION_ACCOUNT_NAME) -k $(INTROSPECTION_ACCOUNT_KEY) -t $(INTROSPECTION_TABLE_NAME) -p $(INTROSPECTION_PARTITION_KEY) --p3 $(Build.BuildId) --manifest-commit-id $latest_commit --repository $repourl
     displayName: 'If configured, update manifest pipeline details in Spektate db after manifest generation'
-    condition: 'and(ne(variables[''INTROSPECTION_ACCOUNT_NAME''], ''''), ne(variables[''INTROSPECTION_ACCOUNT_KEY''], ''''),ne(variables[''INTROSPECTION_TABLE_NAME''], ''''),ne(variables[''INTROSPECTION_PARTITION_KEY''], ''''))'
+    condition: 'and(ne(variables[''INTROSPECTION_ACCOUNT_NAME''], ''''), ne(variables[''INTROSPECTION_ACCOUNT_KEY''], ''''),ne(variables[''INTROSPECTION_TABLE_NAME''], ''''),ne(variables[''INTROSPECTION_PARTITION_KEY''], ''''), ne(variables[''Build.Reason''], ''PullRequest''))'

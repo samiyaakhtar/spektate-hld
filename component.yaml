@@ -1,0 +1,6 @@
+name: default-component
+subcomponents:
+  - name: traefik2
+    method: git
+    source: 'https://github.com/microsoft/fabrikate-definitions.git'
+    path: definitions/traefik2

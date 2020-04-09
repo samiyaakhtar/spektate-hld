@@ -1,0 +1,13 @@
+name: master
+type: component
+subcomponents:
+- name: chart
+  type: helm
+  source: https://github.com/microsoft/spektate
+  method: git
+  path: chart
+  branch: master
+- name: static
+  type: static
+  method: local
+  path: ./static

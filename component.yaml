@@ -1,6 +1,11 @@
 name: default-component
+type: component
 subcomponents:
-  - name: traefik2
-    method: git
-    source: 'https://github.com/microsoft/fabrikate-definitions.git'
-    path: definitions/traefik2
+- name: samiyaakhtar-spektate
+  type: component
+  method: local
+  path: ./samiyaakhtar-spektate
+- name: traefik2
+  source: https://github.com/microsoft/fabrikate-definitions.git
+  method: git
+  path: definitions/traefik2

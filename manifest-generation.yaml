@@ -3,7 +3,8 @@ trigger:
   branches:
     include:
       - master
-variables: []
+variables: 
+- group: inception-vg
 pool:
   vmImage: ubuntu-latest
 steps:

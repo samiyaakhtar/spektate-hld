@@ -1,0 +1,6 @@
+name: samiyaakhtar-spektate
+subcomponents:
+- name: spektate
+  type: component
+  method: local
+  path: ./spektate

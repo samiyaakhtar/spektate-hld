@@ -1,0 +1,4 @@
+subcomponents:
+  chart:
+    config:
+      serviceName: spektate-master

@@ -1,4 +1,7 @@
 subcomponents:
   chart:
     config:
+      image:
+        repository: andrebriggs.azurecr.io/samiyaakhtar/spektate-spektate
+        tag: master-20200410.4
       serviceName: spektate-master

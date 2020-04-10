@@ -3,7 +3,7 @@ type: component
 subcomponents:
 - name: chart
   type: helm
-  source: https://github.com/microsoft/spektate
+  source: https://github.com/samiyaakhtar/spektate
   method: git
   path: chart
   branch: master

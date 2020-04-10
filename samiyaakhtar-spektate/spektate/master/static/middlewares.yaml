@@ -1,0 +1,20 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: spektate-master
+spec:
+  stripPrefix:
+    forceSlash: false
+    prefixes:
+      - /spektate
+
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: spektate
+spec:
+  stripPrefix:
+    forceSlash: false
+    prefixes:
+      - /spektate

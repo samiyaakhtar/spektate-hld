@@ -3,5 +3,5 @@ subcomponents:
     config:
       image:
         repository: andrebriggs.azurecr.io/samiyaakhtar/spektate-spektate
-        tag: master-20200423.1
+        tag: master-20200423.2
       serviceName: spektate-master
